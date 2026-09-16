@@ -110,7 +110,7 @@ describe('Attendance Calculation Engine', () => {
     expect(summary.statusCategory).toBe('NO_DATA');
   });
 
-  test('calculates overall semester summary across multiple subjects', () => {
+  test('calculates overall semester summary enforcing per-subject 75% target', () => {
     const subj1: Subject = { id: 's1', code: 'CS501', name: 'DBMS', type: 'THEORY' };
     const subj2: Subject = { id: 's2', code: 'CS502', name: 'AIML', type: 'THEORY' };
 
@@ -126,7 +126,9 @@ describe('Attendance Calculation Engine', () => {
     expect(overall.totalConducted).toBe(4);
     expect(overall.totalAttended).toBe(3);
     expect(overall.overallPercentage).toBe(75);
-    expect(overall.statusCategory).toBe('SAFE');
+    // Under per-subject rules, s2 is at 50% (below 75%), so overall status is SHORTAGE!
+    expect(overall.statusCategory).toBe('SHORTAGE');
+    expect(overall.subjectsBelowTarget).toBe(1);
   });
 
   test('merges tutorial class occurrences into parent theory course summary', () => {
