@@ -188,15 +188,15 @@ export function calculateOverallSummary(
   if (hasData) {
     if (subjectsBelowTarget > 0) {
       statusCategory = 'SHORTAGE';
-      statusMessage = `SHORTAGE IN ${subjectsBelowTarget} SUBJECT${subjectsBelowTarget > 1 ? 'S' : ''}! NEED ${totalClassesNeeded} CLASSES TO RECOVER 75% PER SUBJECT.`;
+      statusMessage = `SHORTAGE IN ${subjectsBelowTarget} SUBJECT${subjectsBelowTarget > 1 ? 'S' : ''}! NEED ${totalClassesNeeded} CLASSES TO RECOVER PER SUBJECT.`;
     } else if (subjectsAtRisk > 0) {
       statusCategory = 'AT_RISK';
-      statusMessage = `AT RISK IN ${subjectsAtRisk} SUBJECT${subjectsAtRisk > 1 ? 'S' : ''}! ATTEND NEXT CLASSES TO STAY ABOVE 75% PER SUBJECT.`;
+      statusMessage = `AT RISK IN ${subjectsAtRisk} SUBJECT${subjectsAtRisk > 1 ? 'S' : ''}! ATTEND NEXT CLASSES TO STAY ABOVE TARGET PER SUBJECT.`;
     } else {
       statusCategory = 'SAFE';
       statusMessage = totalSafeToMiss > 0
-        ? `ALL SUBJECTS SAFE (≥75%)! YOU CAN SAFELY MISS UP TO ${totalSafeToMiss} CLASS${totalSafeToMiss > 1 ? 'ES' : ''}.`
-        : 'ALL SUBJECTS SAFE (≥75%)! ATTEND NEXT CLASSES TO MAINTAIN TARGET.';
+        ? `ALL SUBJECTS SAFE! YOU CAN SAFELY MISS UP TO ${totalSafeToMiss} CLASS${totalSafeToMiss > 1 ? 'ES' : ''}.`
+        : 'ALL SUBJECTS SAFE! ATTEND NEXT CLASSES TO MAINTAIN TARGET.';
     }
   }
 

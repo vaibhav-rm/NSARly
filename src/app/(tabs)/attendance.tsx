@@ -143,7 +143,7 @@ export default function AttendanceScreen() {
           ATTENDANCE HUB
         </KineticText>
         <KineticText variant="caption" color={COLORS.mutedForeground}>
-          75% Target Predictor, Elective Selector & Backfill Manager
+          Target Predictor, Elective Selector & Backfill Manager
         </KineticText>
       </View>
 
@@ -168,7 +168,7 @@ export default function AttendanceScreen() {
                 <ShieldCheck size={24} color={COLORS.acidYellow} />
               )}
               <KineticText variant="h2" bold uppercase style={{ marginLeft: 8 }}>
-                75% PREDICTOR STATUS
+                PREDICTOR STATUS
               </KineticText>
             </View>
 

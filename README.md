@@ -1,56 +1,55 @@
-# NSARly ⚡
+# NSARly
 
-> **Anti-Attendance Shortage & Timetable Intelligence App**
-> Built for students to track, predict, and guarantee 75% per-subject attendance compliance.
-
----
-
-## 🚀 Overview
-
-**NSARly** is a high-contrast, brutalist-kinetic React Native application (Expo SDK 57) designed to solve the real-world attendance tracking challenges faced by college students. Unlike generic attendance trackers that average attendance across all subjects combined, NSARly enforces **strict per-subject 75% target evaluation**, handles complex elective course choices, aggregates tutorial classes into parent theory subjects, and respects official college semester start date boundaries.
+> **Attendance Management & Timetable System**
+> Built for students to track attendance and maintain subject target compliance.
 
 ---
 
-## ✨ Key Features
+## Overview
 
-* 🎯 **Strict 75% Per-Subject Target Engine**
-  * Evaluates attendance **individually per subject** (preventing shortage in one subject from being masked by 100% in another).
-  * Dynamically calculates `Safe To Miss` and `Classes Needed To Recover` per subject and flags overall status (`SAFE`, `AT_RISK`, `SHORTAGE`).
+**NSARly** is a React Native application (Expo SDK 57) designed to solve attendance tracking challenges for college students. The application evaluates attendance **per subject**, handles elective course choices, aggregates tutorial classes into parent theory subjects, and enforces semester start date boundaries.
 
-* 🔀 **Elective Course Choice Selector**
-  * Supports elective groups (e.g., choosing 1 course out of *Advanced Algorithms* vs *Natural Language Processing*).
-  * Automatically filters out unselected elective courses from weekly schedules, occurrence logs, and percentage calculations.
+---
 
-* 📚 **Combined Tutorial Class Aggregation**
-  * Automatically links tutorial classes (e.g., `22CS52T TOC Tutorial`) directly to parent theory subjects (`22CS52 Theory of Computation`).
-  * Combines attended/conducted counts without cluttering the UI with redundant standalone subjects.
+## Key Features
 
-* 📅 **Custom Timetable Builder & Management**
-  * Easily add, edit, or delete custom weekly class slots.
-  * Start a blank custom timetable from scratch or restore published college seeds (e.g., RVCE 5th Sem CSE).
+* **Per-Subject Target Engine**
+  * Evaluates attendance individually per subject.
+  * Calculates safe-to-miss and required recovery counts per subject and flags overall status (SAFE, AT_RISK, SHORTAGE).
 
-* ⏳ **College Start Date Boundary & Past Backfill**
-  * Blocks occurrence generation and navigation prior to the official college start date.
-  * Allows recording mid-semester untracked previous attendance counts for instant accuracy.
+* **Elective Course Choice Selector**
+  * Supports elective groups (e.g., choosing 1 course out of Advanced Algorithms vs Natural Language Processing).
+  * Excludes unselected elective courses from weekly schedules, occurrence logs, and percentage calculations.
 
-* 🔔 **Smart Reminders & Push Notifications**
-  * Integrated inside **Settings** tab.
+* **Combined Tutorial Class Aggregation**
+  * Automatically links tutorial classes to parent theory subjects.
+  * Combines attended and conducted counts without duplicating subjects in the interface.
+
+* **Custom Timetable Builder**
+  * Add, edit, or delete custom weekly class slots.
+  * Start a custom timetable from scratch or restore default college published schedules.
+
+* **Start Date Boundary & Backfill**
+  * Prevents occurrence generation prior to the official college start date.
+  * Allows recording mid-semester untracked previous attendance counts.
+
+* **Reminders & Notifications**
+  * Integrated inside Settings tab.
   * Create class-linked or custom date-time reminders with optional device push notifications.
 
 ---
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 * **Framework**: React Native (Expo SDK 57 / Expo Router v4)
 * **Language**: TypeScript
 * **State & Persistence**: `@react-native-async-storage/async-storage` + Firebase Auth & Firestore
-* **Design System**: Brutalist-Kinetic aesthetic (`COLORS.acidYellow`, `KineticCard`, `KineticText`)
 * **Icons**: `lucide-react-native`
 * **Testing**: Jest (`npx jest`)
 
 ---
 
-## ⚙️ Getting Started
+## Setup & Running
 
 ### Prerequisites
 * Node.js (v18+)
@@ -73,7 +72,7 @@ npx expo start
 
 ---
 
-## 🧪 Testing & Verification
+## Testing & Verification
 
 ```bash
 # Run TypeScript typecheck
@@ -88,5 +87,5 @@ EXPO_NO_TELEMETRY=1 npx expo export --platform web
 
 ---
 
-## 📄 License
+## License
 MIT License © 2026 NSARly Project.
