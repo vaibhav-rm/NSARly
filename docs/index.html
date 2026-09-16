@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NSARly ⚡ — Anti-Attendance Shortage & Timetable Intelligence</title>
+  <meta name="description" content="NSARly is the brutalist kinetic React Native attendance intelligence app. Track 75% per-subject targets, manage electives, combine tutorial classes, and build custom timetables.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@500;700&family=Space+Grotesk:wght@700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header>
+    <div class="nav-container">
+      <a href="#" class="logo">
+        NSARly <span class="logo-badge">⚡ 75%</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#comparison">Per-Subject Rule</a></li>
+        <li><a href="#calculator">Live Predictor</a></li>
+        <li><a href="#docs">Documentation</a></li>
+        <li><a href="https://github.com/vaibhav-rm/NSARly" target="_blank" class="btn-github">GitHub Repo ↗</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <div class="hero-badge">
+        <span>NEW RELEASE</span> • EXPO SDK 57 & FIREBASE INTEGRATED
+      </div>
+
+      <h1 class="hero-title">
+        NEVER GET <span>SHORTAGE</span> AGAIN.
+      </h1>
+
+      <p class="hero-subtitle">
+        The brutalist kinetic attendance intelligence app engineered for college students. Enforce 75% per-subject compliance, select electives, merge tutorial classes, and build custom timetables.
+      </p>
+
+      <div class="hero-cta">
+        <a href="#calculator" class="btn-primary">🧮 TRY LIVE PREDICTOR</a>
+        <a href="#docs" class="btn-secondary">📖 READ DOCUMENTATION</a>
+      </div>
+    </div>
+
+    <div class="hero-media">
+      <div class="hero-card">
+        <img src="assets/nsarly_hero_banner.jpg" alt="NSARly Dashboard Mockup" />
+        <div class="hero-stat-badge">
+          <div class="hero-stat-val">75%</div>
+          <div class="hero-stat-lbl">PER-SUBJECT GUARANTEE</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Feature Comparison Section -->
+  <section id="comparison" class="section">
+    <div class="section-header">
+      <span class="section-tag">// WHY GENERIC TRACKERS FAIL</span>
+      <h2 class="section-title">THE PER-SUBJECT 75% GUARANTEE</h2>
+    </div>
+
+    <div class="comparison-container">
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>FEATURE</th>
+            <th>GENERIC TRACKERS ❌</th>
+            <th class="highlight">NSARLY APP ⚡</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="feature-title">Calculation Rule</td>
+            <td><span class="badge-bad">✕ Aggregate Total Average</span> (Masks shortage in individual subjects)</td>
+            <td><span class="badge-good">✓ Strict Per-Subject 75% Rule</span> (Evaluates every course individually)</td>
+          </tr>
+          <tr>
+            <td class="feature-title">Elective Courses</td>
+            <td><span class="badge-bad">✕ Pollutes Schedule</span> (Shows unselected alternate electives)</td>
+            <td><span class="badge-good">✓ Enrolled Elective Selector</span> (Hides unselected electives from schedule & math)</td>
+          </tr>
+          <tr>
+            <td class="feature-title">Tutorial Classes</td>
+            <td><span class="badge-bad">✕ Separate Standalone Subject</span> (Clutters dashboard with fake subjects)</td>
+            <td><span class="badge-good">✓ Combined Parent Aggregation</span> (Merges tutorial counts into main theory)</td>
+          </tr>
+          <tr>
+            <td class="feature-title">College Start Date</td>
+            <td><span class="badge-bad">✕ Shows Past Occurrences</span> (Generates classes before college opens)</td>
+            <td><span class="badge-good">✓ Enforces Start Date Limit</span> (Prevents date navigation before semester start)</td>
+          </tr>
+          <tr>
+            <td class="feature-title">Past Data Backfill</td>
+            <td><span class="badge-bad">✕ Manual Daily Marking</span> (Requires marking every past day one-by-one)</td>
+            <td><span class="badge-good">✓ Instant Untracked Backfill</span> (Set initial attended/conducted counts in seconds)</td>
+          </tr>
+          <tr>
+            <td class="feature-title">Timetable Management</td>
+            <td><span class="badge-bad">✕ Fixed Hardcoded Slots</span></td>
+            <td><span class="badge-good">✓ Custom Timetable Builder</span> (Build custom slots or restore college seeds)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Core Features Grid -->
+  <section id="features" class="section">
+    <div class="section-header">
+      <span class="section-tag">// ARCHITECTURE & CAPABILITIES</span>
+      <h2 class="section-title">ENGINEERED FOR ACCURACY</h2>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🎯</div>
+        <h3 class="feature-title">Strict 75% Per-Subject Engine</h3>
+        <p class="feature-desc">
+          Evaluates attendance metrics per individual course. If any single subject drops below 75%, NSARly triggers an immediate shortage warning with exact recovery metrics.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🔀</div>
+        <h3 class="feature-title">Elective Choice Selector</h3>
+        <p class="feature-desc">
+          Allows students to pick 1 enrolled elective per group (e.g. <i>Advanced Algorithms</i> vs <i>NLP</i>). Alternate choices are omitted from timetables and calculations.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">📚</div>
+        <h3 class="feature-title">Combined Tutorial Classes</h3>
+        <p class="feature-desc">
+          Links tutorial classes directly to parent theory courses (e.g. <i>TOC Tutorial → TOC Theory</i>), aggregating attended/conducted numbers seamlessly.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">📅</div>
+        <h3 class="feature-title">Custom Timetable Builder</h3>
+        <p class="feature-desc">
+          Create, edit, or clear weekly class slots to build your custom schedule from scratch, or re-import default college timetable seeds anytime.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">⏳</div>
+        <h3 class="feature-title">Start Date Boundary & Backfill</h3>
+        <p class="feature-desc">
+          Enforces semester start date boundaries so past dates aren't polluted. Includes initial count editors for mid-semester untracked backfills.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🔔</div>
+        <h3 class="feature-title">Smart Push Reminders</h3>
+        <p class="feature-desc">
+          Set custom reminders linked to specific timetable class slots or target dates, with optional native push notifications and in-app alerts inside Settings.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Live Predictor Calculator Demo -->
+  <section id="calculator" class="section">
+    <div class="section-header">
+      <span class="section-tag">// INTERACTIVE WIDGET</span>
+      <h2 class="section-title">TEST THE 75% PREDICTOR ENGINE</h2>
+    </div>
+
+    <div class="calculator-box">
+      <div class="calc-inputs">
+        <div class="input-group">
+          <label for="calcAttended">Classes Attended (A)</label>
+          <input type="number" id="calcAttended" value="18" min="0" />
+        </div>
+
+        <div class="input-group">
+          <label for="calcConducted">Classes Conducted (C)</label>
+          <input type="number" id="calcConducted" value="20" min="0" />
+        </div>
+
+        <div class="input-group">
+          <label for="calcTarget">Target Attendance Percentage</label>
+          <select id="calcTarget">
+            <option value="75" selected>75% (Standard College Minimum)</option>
+            <option value="80">80% (Safe Buffer)</option>
+            <option value="85">85% (Distinction Goal)</option>
+          </select>
+        </div>
+
+        <div>
+          <label style="font-family: var(--font-heading); font-weight: 700; font-size: 0.75rem; color: #888; text-transform: uppercase;">QUICK TEST PRESETS:</label>
+          <div class="preset-btns">
+            <button class="btn-chip" data-att="18" data-cond="20">AIML (18/20)</button>
+            <button class="btn-chip" data-att="8" data-cond="12">TOC (8/12 - Shortage)</button>
+            <button class="btn-chip" data-att="15" data-cond="15">DBMS (15/15)</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="calc-result">
+        <div id="resultHero" class="result-hero" style="color: var(--accent-yellow);">90%</div>
+        <div id="resultBadge" class="result-badge badge-safe">SAFE</div>
+        <div id="resultMsg" class="result-msg">YOU CAN SAFELY MISS NEXT 4 CLASSES.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Documentation Hub -->
+  <section id="docs" class="section">
+    <div class="section-header">
+      <span class="section-tag">// DEVELOPER & USER GUIDES</span>
+      <h2 class="section-title">DOCUMENTATION HUB</h2>
+    </div>
+
+    <div class="docs-container">
+      <div class="docs-tabs">
+        <button class="tab-btn active" data-tab="tab-quickstart">🚀 QUICK START</button>
+        <button class="tab-btn" data-tab="tab-math">📐 MATH ENGINE SPEC</button>
+        <button class="tab-btn" data-tab="tab-schema">⚙️ ELECTIVES & TUTORIALS</button>
+        <button class="tab-btn" data-tab="tab-firebase">🔥 FIREBASE & STORAGE</button>
+      </div>
+
+      <div class="docs-content">
+        <!-- Tab 1: Quick Start -->
+        <div id="tab-quickstart" class="tab-pane active">
+          <h3 class="doc-heading">Installation & Local Development</h3>
+          <p class="doc-text">
+            NSARly is built on React Native with Expo SDK 57 and Expo Router v4. Follow these steps to clone and run locally:
+          </p>
+
+          <div class="code-block">
+# Clone the repository
+git clone git@github.com:vaibhav-rm/NSARly.git
+cd NSARly
+
+# Install dependencies
+npm install
+
+# Run TypeScript type check
+npx tsc --noEmit
+
+# Run Jest unit test suite (8/8 tests)
+npx jest
+
+# Start Expo development server
+npx expo start
+          </div>
+
+          <h3 class="doc-heading">Environment Variables Setup</h3>
+          <p class="doc-text">
+            Create a <code>.env</code> file in the project root with your Firebase credentials:
+          </p>
+
+          <div class="code-block">
+EXPO_PUBLIC_FIREBASE_API_KEY="AIzaSyCnWv6eK..."
+EXPO_PUBLIC_FIREBASE_AUTH_DOMAIN="nsarly-bb3e3.firebaseapp.com"
+EXPO_PUBLIC_FIREBASE_PROJECT_ID="nsarly-bb3e3"
+EXPO_PUBLIC_FIREBASE_STORAGE_BUCKET="nsarly-bb3e3.firebasestorage.app"
+EXPO_PUBLIC_FIREBASE_MESSAGING_SENDER_ID="663582854457"
+EXPO_PUBLIC_FIREBASE_APP_ID="1:663582854457:web:93819105b58fe6cb3f2ce8"
+          </div>
+        </div>
+
+        <!-- Tab 2: Math Engine -->
+        <div id="tab-math" class="tab-pane">
+          <h3 class="doc-heading">Per-Subject Attendance Calculation Engine</h3>
+          <p class="doc-text">
+            Given total attended classes \(A\) (including initial untracked backfill and merged tutorial classes) and total conducted classes \(C\) (excluding cancelled/not held classes):
+          </p>
+
+          <div class="code-block">
+Percentage P = (A / C) * 100
+
+If P >= Target (75%):
+  Safe To Miss = floor( A / (Target / 100) ) - C
+
+If P < Target (75%):
+  Classes Needed = ceil( ( (Target / 100) * C - A ) / (1 - (Target / 100)) )
+          </div>
+
+          <p class="doc-text">
+            <strong>Cancelled Class Rule:</strong> Classes marked as <code>CANCELLED</code> (lecturer absent, college holiday, room shift) are incremented in total occurrences but excluded from total conducted classes \(C\), ensuring student percentages are never penalized.
+          </p>
+        </div>
+
+        <!-- Tab 3: Schema -->
+        <div id="tab-schema" class="tab-pane">
+          <h3 class="doc-heading">Elective & Tutorial Data Model</h3>
+          <p class="doc-text">
+            Subject schema defining elective groups and parent-tutorial linkage:
+          </p>
+
+          <div class="code-block">
+export interface Subject {
+  id: string;
+  code: string;           // e.g. "22CS52"
+  name: string;           // e.g. "Theory of Computation"
+  type: 'THEORY' | 'LAB' | 'ELECTIVE' | 'TUTORIAL';
+  parentSubjectId?: string; // Tutorial linkage (e.g. 'rvce_toc')
+  isElective?: boolean;     // Flag for elective course
+  electiveGroup?: string;   // e.g. 'ELECTIVE_1'
+  isSelectedElective?: boolean; // Enrolled flag
+  initialAttended?: number; // Past backfill count
+  initialConducted?: number;// Past backfill count
+}
+          </div>
+        </div>
+
+        <!-- Tab 4: Firebase -->
+        <div id="tab-firebase" class="tab-pane">
+          <h3 class="doc-heading">Dual Offline-First Storage Architecture</h3>
+          <p class="doc-text">
+            NSARly uses an offline-first architecture powered by <code>@react-native-async-storage/async-storage</code>. All timetable entries, occurrence logs, and profile preferences are persisted locally for instantaneous app startup, while asynchronously syncing changes to Firebase Firestore under user collections:
+          </p>
+
+          <div class="code-block">
+users/
+  {userId}/
+    profile
+    semesters/
+      {semesterId}/
+        timetables/current
+        classOccurrences/{occurrenceId}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="logo">
+        NSARly <span class="logo-badge">⚡ 75%</span>
+      </div>
+
+      <div style="display: flex; gap: 16px;">
+        <a href="https://github.com/vaibhav-rm/NSARly" target="_blank" class="btn-primary" style="padding: 10px 20px; font-size: 0.85rem;">
+          VIEW ON GITHUB
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>MIT License © 2026 NSARly Project. Built with Expo SDK 57, React Native & Firebase.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="app.js"></script>
+</body>
+</html>
